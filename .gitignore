@@ -1,0 +1,16 @@
+# Downloaded data
+data/*.csv
+data/*.tmp
+!data/sites.csv
+
+# Trained models and outputs
+models/
+results/
+logs/
+
+# Python
+__pycache__/
+*.pyc
+
+# Local settings
+.env*

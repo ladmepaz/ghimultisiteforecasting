@@ -1,0 +1,34 @@
+country,site,nsrdb_gid,latitude,longitude,elevation_m
+india,Bangalore,3208902,12.97,77.58,916
+india,Barmer,3027840,25.77,71.38,189
+india,Bhuj,2984951,23.25,69.66,100
+india,Bikaner,3077475,28.01,73.3,230
+india,Gandhinagar,3058459,23.21,72.62,74
+india,Jaipur,3151975,26.93,75.82,439
+india,Jaisalmer,3015970,26.93,70.9,245
+india,Jodhpur,3069338,26.25,73.02,219
+india,Kota,3153258,25.17,75.86,258
+india,Lucknow,3315777,26.85,80.94,125
+india,Mumbai,3064979,19.09,72.86,12
+india,Nagpur,3257686,21.13,79.1,303
+india,New Delhi,3196709,28.61,77.22,217
+india,Rajkot,3013117,22.29,70.78,139
+india,Shimla,3195346,31.09,77.18,1840
+india,Srinagar,3120295,34.09,74.78,1584
+india,Vadodra,3075268,22.29,73.22,38
+colombia,Acandi,1136774,8.53,-77.3,39
+colombia,Barranquilla,1219681,10.97,-74.78,11
+colombia,Buenaventura,1145716,3.89,-77.02,14
+colombia,Cali,1162579,3.45,-76.5,971
+colombia,Chinchiná,1193543,4.97,-75.58,1474
+colombia,Coveñas,1190718,9.41,-75.66,2
+colombia,El Tambo,1152181,2.45,-76.82,1749
+colombia,Girón,1272203,7.09,-73.14,808
+colombia,Ituango,1186682,7.17,-75.78,1283
+colombia,Neiva,1202951,2.97,-75.3,459
+colombia,Puerto Gaitán,1305865,4.29,-72.1,175
+colombia,Puerto Nare,1226188,6.21,-74.58,137
+colombia,Riohacha,1278589,11.53,-72.94,17
+colombia,Sotaquirá,1268374,5.77,-73.26,2632
+colombia,Taminango,1138210,1.57,-77.26,1547
+colombia,Valledupar,1268257,10.45,-73.26,152
