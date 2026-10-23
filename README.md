@@ -4,7 +4,7 @@ Code to reproduce the experiments of
 
 > J. F. Ruiz-Munoz, L. S. Hoyos-Gómez, V. A. Tikkiwal. *Beyond Single-Site Models:
 > Multi-Location Data Improves GHI Forecasting Across Contrasting Climates.*
-> Submitted to Applied Energy.
+> Manuscript under review.
 
 The study forecasts hourly Global Horizontal Irradiance (GHI) 1, 3 and 7 days ahead at
 17 sites in India and 16 sites in Colombia, and compares three models:
@@ -19,7 +19,17 @@ Both LSTMs share the same architecture (three LSTM layers with a residual connec
 attention readout and a dense head). All models use the previous 24 hours of GHI, lagged
 meteorological variables and cyclical time features, and are split 70/15/15 by day into
 training, validation and test sets. The LSTMs are scored on the GNN's test hours, so all
-three models are compared on exactly the same observations.
+three models are compared on exactly the same observations, and the differences between
+them are tested with Diebold-Mariano tests corrected for multiple testing (Holm).
+
+Main findings:
+
+- In both countries, models that learn from multiple sites outperform the site-specific
+  LSTMs at most sites, with an average MAE up to 6.9% lower.
+- In clearer-skied India, pooling the data of all sites (joint LSTM) captures most of the
+  gain.
+- In cloudier Colombia, the GNN is the most accurate model at most sites and significantly
+  outperforms the joint LSTM at the 3- and 7-day horizons.
 
 ## Setup
 
@@ -94,6 +104,10 @@ Trained models are saved to `models/{india,colombia}/` and all outputs to `resul
 
 - Timestamps are converted to UTC when the data are loaded, so the sites of a country
   share the same hours.
+- The downloader writes the files in UTC. Some of the files used for the manuscript were
+  downloaded in local time (UTC+5 in India, UTC-5 in Colombia), so a fresh download has the same values but
+  starts and ends each year a few hours apart from them, which can change the results
+  slightly.
 - The order of the sites in `data/sites.csv` fixes the order of the GNN's nodes, so keep it
   unchanged to reproduce the results.
 - Random seeds are fixed, but results can still differ slightly between runs and hardware
